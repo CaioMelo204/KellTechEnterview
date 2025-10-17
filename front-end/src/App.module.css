@@ -1,0 +1,124 @@
+:global(*) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+:global(body) {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 10px;
+}
+
+.participationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+.participationContainer p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.participationInput {
+  width: 80px;
+  padding: 8px 12px;
+  border: 1.5px solid #ced4da;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.participationInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.participationButton {
+  background-color: darkblue;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  border-radius: 20px;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.1s ease;
+}
+
+.participationButton:hover {
+  background-color: #0056b3;
+}
+
+.participationButton:active {
+  transform: scale(0.98);
+}
+
+.cnpjContainer {
+  margin-top: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .participationContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .participationInput,
+  .participationButton {
+    width: 100%;
+  }
+
+  .cnpjContainer {
+    padding: 10px;
+  }
+}
